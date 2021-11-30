@@ -1,9 +1,11 @@
 package models.services;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import models.dao.IClienteDao;
 import models.entity.Cliente;
 
@@ -29,8 +31,8 @@ public class ClienteServiceImp implements IClienteService {
 
 	@Override
 	@Transactional
-	public void save(Cliente cliente) {
-		clienteDao.save(cliente);
+	public Cliente save(Cliente cliente) {
+		return clienteDao.save(cliente);
 		
 	}
 
@@ -42,3 +44,4 @@ public class ClienteServiceImp implements IClienteService {
 	}
 
 }
+
